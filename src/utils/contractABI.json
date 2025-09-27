@@ -1,0 +1,912 @@
+[
+	{
+		"inputs": [],
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "result",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "timestamp",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "NewDiagnosis",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "coordinates",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "NewDrone",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "NewFarm",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "username",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "NewFarmer",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "temp",
+				"type": "string"
+			},
+			{
+				"indexed": false,
+				"internalType": "string",
+				"name": "timestamp",
+				"type": "string"
+			},
+			{
+				"indexed": true,
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "NewWeather",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "WriterApproved",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "WriterRevoked",
+		"type": "event"
+	},
+	{
+		"inputs": [],
+		"name": "VERSION",
+		"outputs": [
+			{
+				"internalType": "string",
+				"name": "",
+				"type": "string"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "approveWriter",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "approvedWriters",
+		"outputs": [
+			{
+				"internalType": "bool",
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllDiagnoses",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "image",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "result",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "insight",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Diagnosis[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllDrones",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "coordinates",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "image_url",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Drone[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllFarmers",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "username",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phone",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "latitude",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "longitude",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Farmer[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllFarms",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "location",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "size_hectares",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "crop_type",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Farm[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "getAllWeather",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "temp",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "humidity",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "condition",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "season",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Weather[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getDiagnosesByFarmer",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "image",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "result",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "insight",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Diagnosis[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getDiagnosisCountByFarmer",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getDroneCountByFarmer",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getDronesByFarmer",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "coordinates",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "image_url",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Drone[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getFarmCountByFarmer",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "username",
+				"type": "string"
+			}
+		],
+		"name": "getFarmerProfile",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "username",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "phone",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "latitude",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "longitude",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Farmer",
+				"name": "",
+				"type": "tuple"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getFarmsByFarmer",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "location",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "size_hectares",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "crop_type",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Farm[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getWeatherCountByFarmer",
+		"outputs": [
+			{
+				"internalType": "uint256",
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			}
+		],
+		"name": "getWeathersByFarmer",
+		"outputs": [
+			{
+				"components": [
+					{
+						"internalType": "string",
+						"name": "farmer",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "temp",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "humidity",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "condition",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "season",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "timestamp",
+						"type": "string"
+					}
+				],
+				"internalType": "struct AgrosightChain.Weather[]",
+				"name": "",
+				"type": "tuple[]"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"internalType": "address",
+				"name": "",
+				"type": "address"
+			}
+		],
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "address",
+				"name": "writer",
+				"type": "address"
+			}
+		],
+		"name": "revokeWriter",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "image",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "result",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "insight",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "timestamp",
+				"type": "string"
+			}
+		],
+		"name": "storeDiagnosis",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "coordinates",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "image_url",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "timestamp",
+				"type": "string"
+			}
+		],
+		"name": "storeDrone",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "location",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "size_hectares",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "crop_type",
+				"type": "string"
+			}
+		],
+		"name": "storeFarm",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "username",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "name",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "phone",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "latitude",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "longitude",
+				"type": "string"
+			}
+		],
+		"name": "storeFarmer",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"internalType": "string",
+				"name": "farmer",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "temp",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "humidity",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "condition",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "season",
+				"type": "string"
+			},
+			{
+				"internalType": "string",
+				"name": "timestamp",
+				"type": "string"
+			}
+		],
+		"name": "storeWeather",
+		"outputs": [],
+		"stateMutability": "nonpayable",
+		"type": "function"
+	}
+]
