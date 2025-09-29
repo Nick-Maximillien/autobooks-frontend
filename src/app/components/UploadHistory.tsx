@@ -153,7 +153,7 @@ export default function UploadsHistory() {
           </p>
           <OnWhatsappToggle />
           <p className="signupRedirect">
-            <Link className="links" href="/dashboard">
+            <Link className="links" href="/shopper_dashboard">
               Back
             </Link>
           </p>
@@ -197,7 +197,7 @@ export default function UploadsHistory() {
         ))}
       </ul>
           <p className="signupRedirect">
-            <Link className="links" href="/dashboard">
+            <Link className="links" href="/shopper_dashboard">
               Back
             </Link>
           </p>

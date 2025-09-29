@@ -12,7 +12,7 @@ export default function OnWhatsappToggle() {
   return (
     <div className="signupToggleContainer">
       <h3 className="loginToggle" onClick={toggleSignup}>
-        {isOpen ? 'Close Nia AI' : 'Use Nia AI'}{' '}
+        {isOpen ? 'Close AutoBooks AI' : 'Use AutoBooks AI'}{' '}
         <b className="create">on Whatsapp
         <figure className="whatsapp">
           <Image

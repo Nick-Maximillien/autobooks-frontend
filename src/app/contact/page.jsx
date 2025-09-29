@@ -8,7 +8,7 @@ export default function Contact() {
 
       <div className="row gy-4">
         <div className="col-md-6 contactDetails">
-          <p><strong>Email:</strong> support@agrosight-ai.africa</p>
+          <p><strong>Email:</strong> support@autobooks-ai.africa</p>
           <p><strong>Phone:</strong> +254 7411 34327</p>
         </div>
 

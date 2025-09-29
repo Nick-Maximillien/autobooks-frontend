@@ -13,7 +13,7 @@ export default function CreateProfileToggle() {
           onClick={() => setIsOpen(true)}
           style={{ cursor: "pointer", color: "#007bff" }}
         >
-          ➕ Create Your Farmer Profile
+          ➕ Create Your Business Profile
         </h3>
       ) : (
         <>

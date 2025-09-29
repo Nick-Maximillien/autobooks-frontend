@@ -59,11 +59,11 @@ export default function ShopperLoginPage() {
         {error && <p className="errorText">{error}</p>}
       </form>
       <p className="signupRedirect">
-        Don&apos;t have a shopper's account?{' '}
-        <Link className="signupLink" href="/shopper_signup">
-          Sign up
-        </Link>
-      </p>
+         No business account yet?{' '}
+       <Link className="signupLink" href="/shopper_signup">
+        Sign up
+     </Link>
+    </p>
     </div>
   );
 }

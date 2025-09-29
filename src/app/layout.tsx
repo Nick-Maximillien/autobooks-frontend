@@ -22,7 +22,7 @@ export default function RootLayout({
       </head>
       <body
         className="bg-cover bg-center bg-no-repeat min-h-screen"
-        style={{ backgroundImage: "url('/images/agrosight-bg.png')" }}
+        style={{ backgroundImage: "url('/images/bg.jpg')" }}
       >
         <div className="bg-black bg-opacity-40 min-h-screen">
           <AuthProvider>

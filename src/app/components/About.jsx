@@ -4,26 +4,29 @@ import Link from "next/link";
 export default function AboutPage() {
   return (
     <div className="aboutContainer container py-5" 
-         style={{ backgroundImage: "url('/images/aboutImg.jpeg')" }}>
-      <h2 className="text-center aboutTitle mb-4">Welcome to:</h2>
+         style={{ backgroundImage: "url('/images/b.png')" }}>
+      <h2 className="text-center aboutTitle mb-4">Welcome to AutoBooks AI</h2>
       
       <div className="row gy-4">
         <div className="col-md-6">
           <ul className="aboutList">
-            <li className="about-list">🌾 Instant crop disease/pest detection via WhatsApp or web</li>
-            <li className="about-list">🧠 AI-generated recommendations for treatment</li>
-            <li className="about-list">🚁 Integration with drone and satellite data for large farms</li>
-            <li className="about-list">🌤️ Weather-aware farming advice</li>
-            <li className="about-list">📊 Trackable history of uploads, analysis, and trends</li>
+            <li className="about-list">📑 AI-powered document engine — scan receipts, invoices, and statements</li>
+            <li className="about-list">🧾 Fully aligned with IFRS for SMEs — precision in every entry</li>
+            <li className="about-list">🤖 Personalized business copilot — track cash flow, expenses, and insights</li>
+            <li className="about-list">📊 Real-time balance sheets and financial reports</li>
+            <li className="about-list">🌍 Lightweight, cloud-native ERP designed for SMEs everywhere</li>
           </ul>
           <p className="aboutText">
-            Agrosight is a a field companion, delivering AI as a 24/7 farm assistance in the farmer’s hands.
+            AutoBooks AI is your always-on business companion — merging accounting standards 
+            with AI intelligence to give small businesses clarity, compliance, and control.
           </p>
         </div>
       </div>
 
       <button className="text-center mt-5 signupRedirect">
-        <Link href="/signup" className="btn btnabt btn-outline-success">Join Agrosight farmers seeking to improve yields through smart farming</Link>
+        <Link href="/signup" className="btn btnabt btn-outline-success">
+          Join AutoBooks AI and simplify your business finance with intelligent accounting
+        </Link>
       </button>
     </div>
   );

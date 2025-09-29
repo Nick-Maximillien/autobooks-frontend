@@ -33,18 +33,18 @@
     width: 100%;
     border-radius: 10px;
     margin-bottom: 5;
-    background-color: wheat;
   }
   .homeHeader, .homeHeader1 {
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: darkgreen;
+    color: white;
     width: 100%;
     padding: 2%;
   }
   .homeHeader1 {
-    font-size: 110%;
-    color: black;
+    font-size: 100%;
+    color: white;
+    text-align: center;
   }
   .homeComponents {
     margin-bottom: 20px;
@@ -70,14 +70,18 @@
     height: auto;
     margin: 0;
     padding: 0;
-    background-color: green;
+    background-color: silver;
     color: white;
   }
-
+  .theMenu {
+    position: relative;
+    left: 30%;
+  }
   .menuIcon {
     width: 100%;
     margin: 0;
     padding: 0;
+
   }
 
   .menuItem {
@@ -100,7 +104,6 @@
     position: relative;
     left: 35%;
   }
-
   .dropdown-list {
     font-size: 90%;
     font-weight: bold;
@@ -108,11 +111,11 @@
     top: 100%;
     right: 0.5%;
     width: 70%;
-    background: rgb(228, 177, 101);
+    background: whitesmoke;
     list-style: none;
     padding: 1rem;
     margin: 0;
-    border: 6px solid green;
+    border: 6px solid silver;
     display: none;
     flex-direction: column;
     z-index: 1001;
@@ -129,7 +132,9 @@
   }
 
   .dropdown-list li:hover {
-    background: gold;
+    background: skyblue;
+    border-radius: 10px;
+    padding: 5px;
   }
 
   a:hover {
@@ -139,7 +144,7 @@
   .loginToggle,
   .signupToggle,
   .createProfileToggle {
-    background-color: silver;
+    background-color: rgb(121, 236, 121);
     border-radius: 0.5rem;
     width: 90%;
     margin: 1rem auto;
@@ -231,7 +236,7 @@
   }
 
   .uploadImage {
-    background-color: lightgreen;
+    background-color: silver;
     border-radius: 0.5rem;
     padding: 1rem;
     margin: 1rem auto;
@@ -268,9 +273,9 @@
     width: 100%;
     border-style: solid;
     border-color: white;
-    border-radius: 30px;
-    border-width: 15px;
-    background-color: silver;
+    border-radius: 10px;
+    border-width: 10px;
+    background-color: skyblue;
     position: relative;
     right: 9%;
   }
@@ -280,6 +285,9 @@
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+  }
+  .chatbar {
+    width: 100%;
   }
 
   .dashboardCard {
@@ -344,16 +352,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: left;
+  text-align: center;
   gap: 0.75rem;
   padding: 1rem;
   border-radius: 0.75rem;
   background: linear-gradient(145deg, #e0f7fa, #ffffff); /* cyanish */
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
-}
-.profiles {
-  text-align: left;
 }
 
 .farmerProfileWrapper:hover {
@@ -512,7 +517,7 @@
   color: red;
 }
 .uploadImage {
-  background-color: lightgreen;
+  background-color: silver;
   border-radius: 0.5rem;
   padding: 1rem;
   margin: 1rem auto;
@@ -680,6 +685,17 @@
   margin-top: 1rem;
   font-size: 0.9rem;
 }
+.signupRedirec {
+  background-color: silver;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;text-align: center;
+}
 
 .signupLink {
   color: #2563eb;
@@ -725,7 +741,7 @@
 }
 
 .signupToggle {
-  background-color: lightgreen;
+  background-color: silver;
   padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   width: 50%;
@@ -1072,6 +1088,7 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   transition: all 0.3s ease-in-out;
   margin: 0.5rem;
+  color: white;
 }
 
 .aboutTitle {
@@ -1148,7 +1165,7 @@
   .homeHeader, .homeHeader1 {
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: darkgreen;
+    color: white;
     width: 100%;
     padding: 2%;
     text-align: center;
@@ -1158,20 +1175,21 @@
   }
     .header {
     width: 100%;
+    height: 50px;
     border-radius: 10px;
     margin-bottom: 5;
-    background-color: wheat;
+    padding-bottom: 30px;
   }
   .homeHeader, .homeHeader1 {
     font-weight: bold;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: darkgreen;
+    color: white;
     width: 100%;
     padding: 2%;
   }
   .homeHeader1 {
-    font-size: 110%;
-    color: black;
+    font-size: 100%;
+    color: white;
   }
 
   .logo, .nav {
@@ -1180,7 +1198,6 @@
 
   .logo {
     width: 20%;
-    padding: 3%;
   }
 
   .logoImg {
@@ -1188,21 +1205,21 @@
   }
 
   .head {
-    position: relative;
-    z-index: 1000;
-    width: 100%;
-    height: auto;
     margin: 0;
-    padding: 0;
+    padding-right: 30px;
     color: white;
+    font-weight: bold;
   }
 
   .menuIcon {
     width: 100%;
-    margin-top: 120%;
     padding: 0;
+  }
+  .navkey {
+    padding: 0;
+    float: right;
     position: relative;
-    left: 250%;
+    left: 100%;
   }
 
   .menuItem {
@@ -1231,13 +1248,12 @@
     font-weight: bold;
     position: absolute;
     top: 100%;
-    left: 50%;
     width: 70%;
     background: rgb(228, 177, 101);
     list-style: none;
     padding: 1rem;
     margin: 0;
-    border: 6px solid green;
+    border: 6px solid white;
     display: none;
     flex-direction: column;
     z-index: 1001;
@@ -1263,7 +1279,7 @@
   }
 
   .logoImg {
-    width: 60%;
+    width: 70%;
   }
 
   .footer {
@@ -1274,21 +1290,22 @@
 
   .dashboardGrid {
     display: grid;
+    max-height: 50%;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem;
   }
 
     .dashboardHeading {
-    text-align: center;
     position: relative;
+    text-align: center;
     top: 10px;
-    width: 100%;
+    width: 97%;
     border-style: solid;
-    border-color: green;
+    border-color: white;
     border-radius: 10px;
     border-width: 10px;
-    background-color: rgb(89, 206, 89);
+    background-color: skyblue;
   }
   .droneButtons {
     flex-direction: row;
@@ -1652,7 +1669,7 @@
 }
 
 .signupBtn {
-  background-color: #43a047;
+  background-color: silver;
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -1663,7 +1680,7 @@
   transition: all 0.3s ease;
 }
 .signupRedirect {
-  background-color: #43a047;
+  background-color: lightgreen;
   border: none;
   border-radius: 0.5rem;
   padding: 1rem;
@@ -1672,6 +1689,8 @@
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
+  position: relative;
+  left: 15%;
 }
 
 .signupBtn:hover {
@@ -1704,7 +1723,6 @@
   flex-direction: column;
   gap: 1.25rem;
 }
-
 .loginBtn {
   background-color: #2563eb;
   border: none;
@@ -1726,7 +1744,18 @@
   font-size: 1rem;
   margin-top: 1.25rem;
 }
+.signupRedirec {
+  background-color: silver;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  font-size: 1rem;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;text-align: center;
 
+}
 .signupLink {
   color: #1d4ed8;
   font-weight: bold;
@@ -1744,9 +1773,14 @@
   margin: 2rem auto;
   text-align: center;
 }
+.loginToggleContaine {
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+}
 
 .loginToggle {
-  background-color: lightgreen;
+  background-color: silver;
   padding: 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
@@ -1759,19 +1793,11 @@
   background-color: #8ed6a7;
 }
 .chatToggle {
-  background-color: lightgreen;
-  padding: 1rem;
-  font-size: 1.25rem;
   border-radius: 0.5rem;
   cursor: pointer;
   font-weight: bold;
   transition: background-color 0.3s ease;
   border-radius: 50px;
-  }
-  .chatIcon {
-    background-color: green;
-    position: relative;
-    left: 150px;
   }
   
 .loginToggleCard {
@@ -1788,7 +1814,7 @@
 }
 
 .signupToggle {
-  background-color: lightgreen;
+  background-color: silver;
   padding: 1rem;
   font-size: 1.25rem;
   border-radius: 0.5rem;
@@ -1950,6 +1976,7 @@
 }
   .aboutContainer {
   background: linear-gradient(135deg, #fff3e0, #ffffff);
+  color: white;
   border-radius: 0.75rem;
   padding: 1rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -1971,6 +1998,8 @@
 
   .aboutText {
     font-size: 1.15rem;
+    position: relative;
+    left: 10%;
   }
 
   .aboutTitle {
@@ -1990,6 +2019,16 @@
   text-align: center;
 }
 
+.serviceCard {
+  background-color: #f5fdf7;
+  border: 1px solid #d0ebd5;
+  border-radius: 8px;
+  padding: 20px;
+  transition: transform 0.2s;
+  margin-bottom: 10px;
+  margin-left: 5px;
+  width: 100%;
+  }
 .weather-chart-status {
   text-align: center;
   padding: 0.75rem;
@@ -2005,6 +2044,8 @@
 }
   .aboutList {
     font-size: 1.05rem;
+    position: relative;
+    left: 15%;
   }
     .landscape\:text-base {
     font-size: 1rem;
@@ -2064,13 +2105,6 @@
     font-size: 1.5rem;
   }
 
-  .serviceCard {
-    padding: 15px;
-  }
-
-  .serviceDescription {
-    font-size: 0.95rem;
-  }
 }
 
 .weatherWidgetCard {
@@ -2087,6 +2121,17 @@
   margin: 0;
   display: grid;
   gap: 1rem;
+}
+
+.serviceTitle {
+  color: #388e3c;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.serviceDescription {
+  font-size: 1rem;
+  color: #444;
 }
 
 .uploadCard {
@@ -2734,3 +2779,36 @@ form {
   margin-top: 3rem;
 }
 
+ /* Landscape: hide dropdown, show inline */
+@media (orientation: landscape) and (min-width: 768px) {
+  .dropdown-nav {
+    display: none;
+  }
+  .inline-nav {
+    display: inline;
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: auto;
+    background-color: white;
+    width: 50%;
+  }
+
+  .inlineMenu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .inlineMenu li a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.2s ease-in-out;
+  }
+
+  .inlineMenu li a:hover {
+    color: #0070f3; /* businessy blue hover */
+  }
+} 

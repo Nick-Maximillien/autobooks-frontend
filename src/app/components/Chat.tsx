@@ -82,8 +82,7 @@ export default function Chat() {
                 maxWidth: "600px",
                 color: "white",
                 padding: "1rem",
-                borderRadius: "10px",
-                background: "silver"}}>
+                borderRadius: "10px",}}>
       <h1 style={{ color: "black", padding: "10px", borderRadius: "10px"}}>Business Assistant</h1>
 
       {/* Chat container */}

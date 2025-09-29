@@ -5,54 +5,54 @@ import DiagnoseOnWhatsapp from "app/components/DiagnoseOnWhatsapp";
 export default function ServicesPage() {
   return (
     <div className="dashboardContainer">
-      <h2 className="dashboardHeading">Agrosight Services</h2>
+      <h2 className="dashboardHeading">AutoBooks AI Services</h2>
 
       <div className="dashboardGrid container">
-        {/* 1. Image-Based Diagnosis */}
+        {/* 1. Smart Expense Tracking */}
         <div className="col-md-6 serviceCard">
-          <h4 className="serviceTitle">📸 Crop Disease & Pest Detection</h4>
+          <h4 className="serviceTitle">💳 Smart Expense Tracking</h4>
           <p className="serviceDescription">
-            Farmers can upload images of their crops and instantly receive AI-powered diagnoses of diseases and pests, enabling early intervention and better yield outcomes.
+            Automatically separate business and personal transactions with AI precision, giving SMEs a clear view of their true financial position.
           </p>
         </div>
 
-        {/* 2. Insight Generator */}
+        {/* 2. AI Insights & Forecasting */}
         <div className="col-md-6 serviceCard">
-          <h4 className="serviceTitle">🧠 AI Insights & Recommendations</h4>
+          <h4 className="serviceTitle">🧠 AI Insights & Forecasting</h4>
           <p className="serviceDescription">
-            Each diagnosis comes with tailored insights and recommendations to guide farmers on the best treatment or action plan.
+            Generate instant insights on cash flow, profitability, and upcoming obligations—powered by an AI engine trained on IFRS for SMEs.
           </p>
         </div>
 
-        {/* 3. Weather */}
+        {/* 3. Real-Time Financial Health */}
         <div className="col-md-6 serviceCard">
-          <h4 className="serviceTitle">🌤️ Real-Time Weather Advisory</h4>
+          <h4 className="serviceTitle">📊 Real-Time Financial Health</h4>
           <p className="serviceDescription">
-            Farmers get real-time weather data and localized forecasts, helping them plan farming activities like irrigation, spraying, and harvesting.
+            View dashboards that update automatically from your data sources—mobile money, bank feeds, and uploaded documents—so you always know where your business stands.
           </p>
         </div>
 
-        {/* 4. Drone Feed */}
+        {/* 4. AI-Powered Document Engine */}
         <div className="col-md-6 serviceCard">
-          <h4 className="serviceTitle">🚁 Drone Data Integration</h4>
+          <h4 className="serviceTitle">📂 AI-Powered Document Engine</h4>
           <p className="serviceDescription">
-            Our platform supports real-time drone feeds and integrates aerial imagery for wider farm assessment and AI-based analysis.
+            Upload receipts, invoices, or statements and let AutoBooks AI extract, classify, and reconcile them instantly into structured records.
           </p>
         </div>
 
-        {/* 5. Upload History */}
+        {/* 5. Personalized Business Copilot */}
         <div className="col-md-6 serviceCard">
-          <h4 className="serviceTitle">📂 Upload History & Reports</h4>
+          <h4 className="serviceTitle">🤝 Personalized Business Copilot</h4>
           <p className="serviceDescription">
-            Farmers can track past diagnoses, insights, and analysis results from their uploads — all securely stored and easy to access.
+            Get proactive reminders and tailored prompts—whether it’s separating funds, paying suppliers, or saving for taxes—delivered in plain, actionable language.
           </p>
         </div>
 
-        {/* 6. Farm Management */}
+        {/* 6. Compliance & Reporting */}
         <div className="col-md-6 serviceCard">
-          <h4 className="serviceTitle">🌱 Digital Farm Management</h4>
+          <h4 className="serviceTitle">📑 Compliance & Reporting</h4>
           <p className="serviceDescription">
-            Farmers can register and manage their farms, including crop types, sizes, and locations, for better tracking and AI personalization.
+            Generate clean, standards-aligned reports with one click, helping SMEs stay compliant and investor-ready without the usual accounting overhead.
           </p>
         </div>
       </div>

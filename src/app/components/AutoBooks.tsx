@@ -3,12 +3,12 @@
 import React, { useState } from "react";
 import { getTokensFromLocalStorage } from "@utils/tokenUtils";
 
-
 export default function Uploader() {
   const [file, setFile] = useState<File | null>(null);
   const [loading, setLoading] = useState(false);
   const [ocrText, setOcrText] = useState<string | null>(null);
-  const [invoiceData, setInvoiceData] = useState<any>(null);
+  // 👇 give invoiceData a safer type
+  const [invoiceData, setInvoiceData] = useState<Record<string, unknown> | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -17,23 +17,22 @@ export default function Uploader() {
     }
   };
 
-    const { accessToken, refreshToken } = getTokensFromLocalStorage();
-    const userRaw = typeof window !== "undefined" ? localStorage.getItem("user") : null;
-    let profileName: string | null = null;
-    let email: string | null = null;
-    let user_id: string | null = null;
+  const { accessToken, refreshToken } = getTokensFromLocalStorage();
+  const userRaw = typeof window !== "undefined" ? localStorage.getItem("user") : null;
+  let profileName: string | null = null;
+  let email: string | null = null;
+  let user_id: string | null = null;
 
-    if (userRaw) {
-      try {
-        const user = JSON.parse(userRaw);
-        profileName = user?.username || null;
-        email = user?.email || null;
-        user_id = user?.user_id || null;
-      } catch (err) {
-        console.error("Failed to parse localStorage.user:", err);
-      }
+  if (userRaw) {
+    try {
+      const user = JSON.parse(userRaw);
+      profileName = user?.username || null;
+      email = user?.email || null;
+      user_id = user?.user_id || null;
+    } catch (err) {
+      console.error("Failed to parse localStorage.user:", err);
     }
-
+  }
 
   const handleUpload = async () => {
     if (!file) {
@@ -61,7 +60,7 @@ export default function Uploader() {
         headers: {
           ...(accessToken && { Authorization: `Bearer ${accessToken}` }),
           ...(refreshToken && { "X-Refresh-Token": refreshToken }),
-          },
+        },
       });
 
       console.log("Response status:", res.status, res.statusText);
@@ -76,9 +75,15 @@ export default function Uploader() {
       const data = JSON.parse(rawText); // try to parse
       setOcrText(data.ocr_text);
       setInvoiceData(data.invoice_data);
-    } catch (err: any) {
-      console.error(" Upload error details:", err);
-      setError(err.message || "Something went wrong (check console logs)");
+    } catch (err: unknown) {
+      // 👇 replace `any` with `unknown` and then narrow
+      if (err instanceof Error) {
+        console.error(" Upload error details:", err);
+        setError(err.message);
+      } else {
+        console.error(" Unknown upload error:", err);
+        setError("Something went wrong (check console logs)");
+      }
     } finally {
       setLoading(false);
     }

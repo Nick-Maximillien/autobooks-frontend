@@ -11,7 +11,7 @@ export default function LoginToggle() {
   return (
     <div className="loginToggleContainer">
       <h3 className="loginToggle" onClick={toggleLogin}>
-        {isOpen ? 'Close Shopper' : 'Shopper'}{' '}
+        {isOpen ? 'Close Business Portal' : 'Open Business Portal'}{' '}
       </h3>
       {isOpen && (
         <div className="loginToggleCard">

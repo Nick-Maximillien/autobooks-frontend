@@ -26,7 +26,7 @@ export default function ChatToggle() {
         <b className="create"> with<strong> Analyst</strong></b>
       </h3>
       {isOpen && (
-        <div className="loginToggleCard">
+        <div className="loginToggleCar">
           <Chat />
         </div>
       )}

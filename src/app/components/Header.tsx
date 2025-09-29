@@ -20,8 +20,10 @@ export default function Header() {
               priority
             />
           </div>
-          <nav className="nav">
-            <ul>
+
+          {/* Existing dropdown nav */}
+          <nav className="nav dropdown-nav">
+            <ul className="theMenu">
               <li
                 className="dropdown-container"
                 onMouseEnter={() => setDropDownOpen(true)}
@@ -38,39 +40,27 @@ export default function Header() {
                 </figure>
                 {dropDownOpen && (
                   <ul className="dropdown-list">
-                    <li className="menuItem">
-                      <Link href="/">Home</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/services">Services</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/shopper_dashboard">Shopper</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/merchant_dashboard">Retailer</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/manufacturer_dashboard">Supplier</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/web">Web Shop assistant</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/whatsapp">Whatsapp Shop assistant</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/team">Team</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/observer">Observer</Link>
-                    </li>
-                    <li className="menuItem">
-                      <Link href="/contact">Contact</Link>
-                    </li>
+                    <li className="menuItem"><Link href="/">Home</Link></li>
+                    <li className="menuItem"><Link href="/services">Services</Link></li>
+                    <li className="menuItem"><Link href="/shopper_dashboard">Business dashboard</Link></li>
+                    <li className="menuItem"><Link href="/web">Web Business assistant</Link></li>
+                    <li className="menuItem"><Link href="/whatsapp">Whatsapp Business assistant</Link></li>
+                    <li className="menuItem"><Link href="/contact">Contact</Link></li>
                   </ul>
                 )}
               </li>
+            </ul>
+          </nav>
+
+          {/* Inline nav for landscape */}
+          <nav className="nav inline-nav">
+            <ul className="inlineMenu">
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/services">Services</Link></li>
+              <li><Link href="/shopper_dashboard">Business dashboard</Link></li>
+              <li><Link href="/web">Web Business assistant</Link></li>
+              <li><Link href="/whatsapp">Whatsapp Business assistant</Link></li>
+              <li><Link href="/contact">Contact</Link></li>
             </ul>
           </nav>
         </div>

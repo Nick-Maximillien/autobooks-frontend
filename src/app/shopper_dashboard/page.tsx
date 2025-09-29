@@ -54,7 +54,7 @@ export default function ShopperDashboard() {
           <OnWhatsappToggle />
         </div>
       </section>
-        <p className="signupRedirect">
+        <p className="signupRedirec">
           <Link className="links" href="/">
             Home
           </Link>
