@@ -1,3 +1,12 @@
+/* Default: portrait / small screens */
+.inline-nav {
+  display: none; /* hide inline nav by default */
+}
+
+.dropdown-nav {
+  display: block; /* show dropdown nav by default */
+}
+
 @media screen and (orientation:portrait) {
     .portrait\:text-sm {
     font-size: 0.875rem;
@@ -2779,13 +2788,13 @@ form {
   margin-top: 3rem;
 }
 
- /* Landscape: hide dropdown, show inline */
-@media (orientation: landscape) and (min-width: 768px) {
+/* Landscape + wide screens: flip behavior */
+@media (orientation: landscape) {
   .dropdown-nav {
-    display: none;
+    display: none; /* hide dropdown in landscape desktop */
   }
   .inline-nav {
-    display: inline;
+    display: block; /* show inline nav only in landscape */
     padding: 15px;
     border-radius: 10px;
     margin-left: auto;
