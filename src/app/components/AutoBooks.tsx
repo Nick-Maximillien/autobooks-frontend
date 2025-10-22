@@ -53,7 +53,7 @@ export default function Uploader() {
       if (user_id) formData.append("user_id", user_id);
 
       console.log(" Uploading to backend with file:", file.name);
-      const apiBase = process.env.NEXT_PUBLIC_FASTAPI_API_URL || "http://localhost:8001";
+      const apiBase = process.env.NEXT_PUBLIC_FAST_API_URL;
       const res = await fetch(`${apiBase}/upload`, {
         method: "POST",
         body: formData,
