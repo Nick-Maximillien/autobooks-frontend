@@ -83,7 +83,7 @@ export default function ChatToggle() {
         /* Chat box container */
         .chat-box {
           position: fixed;
-          bottom: 90px;
+          top: 90px;
           right: 20px;
           width: 320px;
           height: 450px;
