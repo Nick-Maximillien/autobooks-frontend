@@ -40,7 +40,7 @@ export default function Chat() {
       const userMessage: ChatMessage = { role: "user", text: message };
       setChatLog((prev) => [...prev, userMessage]);
 
-      const res = await fetch("http://localhost:8001/copilot", {
+      const res = await fetch("https://autobooks-ai.onrender.com/copilot", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
