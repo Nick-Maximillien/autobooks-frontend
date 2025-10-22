@@ -18,7 +18,7 @@ export default function RootLayout({
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Agrosight AI</title>
+        <title>autobooks finance</title>
       </head>
       <body
         className="bg-cover bg-center bg-no-repeat min-h-screen"

@@ -46,7 +46,6 @@ export default function Header() {
                     <li className="menuItem"><Link href="/web">Web Business assistant</Link></li>
                     <li className="menuItem"><Link href="/whatsapp">Whatsapp Business assistant</Link></li>
                     <li className="menuItem"><Link href="/contact">Contact</Link></li>
-                    <li className="menuItem"><Link href="/defi_sign_up">defi</Link></li>
                   </ul>
                 )}
               </li>
@@ -62,7 +61,6 @@ export default function Header() {
               <li><Link href="/web">Web Business assistant</Link></li>
               <li><Link href="/whatsapp">Whatsapp Business assistant</Link></li>
               <li><Link href="/contact">Contact</Link></li>
-              <li className="menuItem"><Link href="/defi_sign_up">defi</Link></li>
             </ul>
           </nav>
         </div>
