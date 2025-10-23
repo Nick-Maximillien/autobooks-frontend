@@ -7,93 +7,96 @@ import Image from 'next/image';
 export default function ChatToggle() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const toggleChat = () => setIsOpen(prev => !prev);
+  const toggleChat = () => setIsOpen((prev) => !prev);
 
   return (
     <>
-      <div className="chat-toggle-container">
-        {!isOpen && (
-          <button className="chat-toggle-button" onClick={toggleChat}>
-            <Image
-              src="/images/bot.png"
-              alt="Chat Icon"
-              width={40}
-              height={40}
-              className="chat-icon"
-            />
-          </button>
-        )}
+      {/* Floating Button */}
+      {!isOpen && (
+        <button className="chat-fab" onClick={toggleChat}>
+          <Image
+            src="/images/bot.png"
+            alt="Chat"
+            width={28}
+            height={28}
+            className="chat-fab-icon"
+          />
+          <p className="chatz">Chat</p>
+        </button>
+      )}
 
-        {isOpen && (
-          <div className="chat-box">
-            <div className="chat-header">
-              <div className="chat-header-left">
-                <Image
-                  src="/images/bot.png"
-                  alt="Bot"
-                  width={30}
-                  height={30}
-                  className="chat-header-icon"
-                />
-                <span className="chat-header-title">Analyst Bot</span>
-              </div>
-              <button className="chat-close-btn" onClick={toggleChat}>
-                ✕
-              </button>
+      {/* Chat Box */}
+      {isOpen && (
+        <div className="chat-wrapper">
+          <div className="chat-header">
+            <div className="chat-header-info">
+              <Image
+                src="/images/bot.png"
+                alt="Bot"
+                width={28}
+                height={28}
+                className="chat-avatar"
+              />
+              <span>Analyst Bot</span>
             </div>
-            <div className="chat-body">
-              <Chat />
-            </div>
+            <button className="chat-close" onClick={toggleChat}>
+              ✕
+            </button>
           </div>
-        )}
-      </div>
+          <div className="chat-body">
+            <Chat />
+          </div>
+        </div>
+      )}
 
       <style jsx>{`
-        .chat-toggle-container {
+        /* Floating Button */
+        .chat-fab {
           position: fixed;
-          bottom: 20px;
-          right: 20px;
-          z-index: 1000;
-        }
-
-        /* Floating button */
-        .chat-toggle-button {
+          top: 60px;
+          right: 60px;
+          width: 60px;
+          height: 60px;
           background: linear-gradient(135deg, #8a2be2, #00d4ff);
           border: none;
           border-radius: 50%;
-          width: 60px;
-          height: 60px;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
           display: flex;
           align-items: center;
           justify-content: center;
-          box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
           cursor: pointer;
-          transition: transform 0.2s ease, box-shadow 0.2s ease;
+          transition: all 0.25s ease;
+          z-index: 1000;
         }
 
-        .chat-toggle-button:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+        .chat-fab:hover {
+          transform: translateY(-3px) scale(1.05);
+          box-shadow: 0 8px 28px rgba(0, 0, 0, 0.35);
         }
 
-        .chat-icon {
+        .chat-fab-icon {
           border-radius: 50%;
         }
+        .chatz {
+        font-size: blod;
+        padding-right: 5px;
+        }
 
-        /* Chat box container */
-        .chat-box {
+        /* Chat Wrapper */
+        .chat-wrapper {
           position: fixed;
-          top: 90px;
-          right: 20px;
-          width: 320px;
-          height: 450px;
-          background: #ffffff;
+          top: 100px;
+          right: 24px;
+          width: 360px;
+          height: 500px;
+          background: #fff;
           border-radius: 16px;
-          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
           display: flex;
           flex-direction: column;
           overflow: hidden;
-          animation: fadeInUp 0.3s ease;
+          animation: slideUp 0.3s ease;
+          z-index: 1000;
         }
 
         /* Header */
@@ -106,39 +109,41 @@ export default function ChatToggle() {
           justify-content: space-between;
         }
 
-        .chat-header-left {
+        .chat-header-info {
           display: flex;
           align-items: center;
           gap: 8px;
-        }
-
-        .chat-header-icon {
-          border-radius: 50%;
-        }
-
-        .chat-header-title {
-          font-weight: 600;
+          font-weight: 500;
           font-size: 0.95rem;
         }
 
-        .chat-close-btn {
+        .chat-avatar {
+          border-radius: 50%;
+        }
+
+        .chat-close {
           background: transparent;
           border: none;
           color: #fff;
           font-size: 1.2rem;
           cursor: pointer;
+          transition: opacity 0.2s ease;
         }
 
-        /* Chat body */
+        .chat-close:hover {
+          opacity: 0.8;
+        }
+
+        /* Body */
         .chat-body {
           flex: 1;
-          overflow-y: auto;
           padding: 1rem;
-          background: #f8f9fa;
+          overflow-y: auto;
+          background: #f9fafc;
         }
 
-        /* Animations */
-        @keyframes fadeInUp {
+        /* Animation */
+        @keyframes slideUp {
           from {
             opacity: 0;
             transform: translateY(20px);
@@ -151,10 +156,16 @@ export default function ChatToggle() {
 
         /* Responsive */
         @media (max-width: 480px) {
-          .chat-box {
+          .chat-wrapper {
             width: 90%;
             right: 5%;
             height: 70vh;
+            bottom: 90px;
+          }
+
+          .chat-fab {
+            width: 55px;
+            height: 55px;
           }
         }
       `}</style>

@@ -5,7 +5,6 @@ import AboutPage from './components/About';
 import HomeImage from './components/HomeImage';
 import ShopperSignupToggle from './components/ShopperSignupToggle';
 import OnWhatsappToggle from './components/OnWhatsappToggle';
-import ChatToggle from 'app/components/ChatToggle';
 
 const Home = () => {
   return (
@@ -15,10 +14,6 @@ const Home = () => {
           <div className="heroLeft">
             <h1 className="dashboardHeading"><b>AutoBooks AI</b></h1>
             <h3 className="homeHeader1">AI-Powered Accounting & Business Copilot</h3>
-
-            <Suspense fallback={<p>Loading...</p>}>
-              <ChatToggle />
-            </Suspense>
             <Suspense fallback={<p>Loading...</p>}>
               <ShopperLoginToggle />
             </Suspense>
@@ -68,7 +63,6 @@ const Home = () => {
 
         .heroSection {
           width: 100%;
-          padding: 2rem;
           display: flex;
           justify-content: center;
         }
@@ -81,7 +75,7 @@ const Home = () => {
           border-radius: 20px;
           max-width: 1200px;
           width: 100%;
-          padding: 2rem;
+          padding: 2px;
           display: flex;
           flex-direction: column;
           gap: 1.5rem;
@@ -115,7 +109,7 @@ const Home = () => {
         .homeComponents {
           display: flex;
           justify-content: center;
-          padding: 1rem 0;
+          padding: 2px;
         }
 
         button,
@@ -150,7 +144,7 @@ const Home = () => {
 
           .heroLeft, .heroRight {
             flex: 1;
-            padding: 1rem;
+            padding: 5px;
           }
 
           .dashboardHeading {
