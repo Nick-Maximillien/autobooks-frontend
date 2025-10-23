@@ -12,7 +12,7 @@ const Home = () => {
       <section className="heroSection">
         <div className="heroContent">
           <div className="heroLeft">
-            <h1 className="dashboardHeading"><b>AutoBooks AI</b></h1>
+            <h1 className="dashboardHeadin"><b>AutoBooks AI</b></h1>
             <h3 className="homeHeader1">AI-Powered Accounting & Business Copilot</h3>
             <Suspense fallback={<p>Loading...</p>}>
               <ShopperLoginToggle />
@@ -84,19 +84,21 @@ const Home = () => {
           animation: fadeIn 0.7s ease-out;
         }
 
-        .dashboardHeading {
+        .dashboardHeadin {
           font-size: 2.5rem;
           background: linear-gradient(90deg, #00d4ff, #8a2be2);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           letter-spacing: 1px;
           margin-bottom: 0.5rem;
+          padding: 10px;
         }
 
         .homeHeader1 {
           font-size: 1.1rem;
           font-weight: 300;
           opacity: 0.9;
+          padding: 10px;
         }
 
         .homeHeader2 {
